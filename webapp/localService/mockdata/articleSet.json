@@ -1,0 +1,60 @@
+{
+	"d": {
+		"results": [{
+			"__metadata": {
+				"id": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/articleSet('97')",
+				"uri": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/articleSet('97')",
+				"type": "ZLOCTRANSFER_SRV.article"
+			},
+			"Article": "97",
+			"Artdesc": "Anchor Milk Powder 0.4lkG Sameera 183",
+			"Quantity": "0.000"
+		}, {
+			"__metadata": {
+				"id": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/articleSet('1')",
+				"uri": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/articleSet('1')",
+				"type": "ZLOCTRANSFER_SRV.article"
+			},
+			"Article": "1",
+			"Artdesc": "PEDIGREE CHUM JUNIOR (PUPPY) 400G",
+			"Quantity": "0.000"
+		}, {
+			"__metadata": {
+				"id": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/articleSet('2')",
+				"uri": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/articleSet('2')",
+				"type": "ZLOCTRANSFER_SRV.article"
+			},
+			"Article": "2",
+			"Artdesc": "EH TANDOORI CHICKEN KG",
+			"Quantity": "0.000"
+		}, {
+			"__metadata": {
+				"id": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/articleSet('3')",
+				"uri": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/articleSet('3')",
+				"type": "ZLOCTRANSFER_SRV.article"
+			},
+			"Article": "3",
+			"Artdesc": "THREE STAR CUT MUKUNUWANNA 150G",
+			"Quantity": "0.000"
+		}, {
+			"__metadata": {
+				"id": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/articleSet('4')",
+				"uri": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/articleSet('4')",
+				"type": "ZLOCTRANSFER_SRV.article"
+			},
+			"Article": "4",
+			"Artdesc": "WIPRO CFL BULB PIN 5W 2U",
+			"Quantity": "0.000"
+		}, {
+			"__metadata": {
+				"id": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/articleSet('5')",
+				"uri": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/articleSet('5')",
+				"type": "ZLOCTRANSFER_SRV.article"
+			},
+			"Article": "5",
+			"Artdesc": "SILENTVALLEY B/LOT.FAIR SKIN 275ML",
+			"Quantity": "0.000"
+		}]
+	}
+
+}

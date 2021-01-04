@@ -1,0 +1,17 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "id": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/userdataSet(1)",
+                    "uri": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/userdataSet(1)",
+                    "type": "ZLOCTRANSFER_SRV.userdata"
+                },
+                "Id": 1,
+                "Euser": "ABAPDEV1",
+                "Movetype": "311",
+                "Site": "ABAP"
+            }
+        ]
+    }
+}

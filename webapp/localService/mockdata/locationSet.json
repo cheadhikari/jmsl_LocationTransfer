@@ -1,0 +1,42 @@
+{
+    "d": {
+        "results": [
+            {
+                "__metadata": {
+                    "id": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/locationSet('0002')",
+                    "uri": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/locationSet('0002')",
+                    "type": "ZLOCTRANSFER_SRV.location"
+                },
+                "Locationid": "0002",
+                "Locationname": "Returnable"
+            },
+            {
+                "__metadata": {
+                    "id": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/locationSet('0003')",
+                    "uri": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/locationSet('0003')",
+                    "type": "ZLOCTRANSFER_SRV.location"
+                },
+                "Locationid": "0003",
+                "Locationname": "Cycle Count Diff"
+            },
+            {
+                "__metadata": {
+                    "id": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/locationSet('0004')",
+                    "uri": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/locationSet('0004')",
+                    "type": "ZLOCTRANSFER_SRV.location"
+                },
+                "Locationid": "0004",
+                "Locationname": "Hot Food"
+            },
+            {
+                "__metadata": {
+                    "id": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/locationSet('0005')",
+                    "uri": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/locationSet('0005')",
+                    "type": "ZLOCTRANSFER_SRV.location"
+                },
+                "Locationid": "0005",
+                "Locationname": "Fresh Juice"
+            }
+        ]
+    }
+}

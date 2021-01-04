@@ -1,0 +1,84 @@
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZLOCTRANSFER_SRV" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="userdata" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="INT4" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Euser" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="User Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Movetype" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Movement type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Site" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="site" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Site"/>
+                </Key>
+                <Property Name="Site" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sitename" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Name 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="location" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Locationid"/>
+                </Key>
+                <Property Name="Locationid" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Receiving SLoc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Locationname" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Name 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="article" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Article"/>
+                </Key>
+                <Property Name="Article" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Artdesc" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Quantity" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Quantiry" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="matdochead" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Headid"/>
+                </Key>
+                <Property Name="Headid" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="INT1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Matdoc" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Material Doc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Matyear" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Mat. Doc. Year" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Site" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Plant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MoveStloc" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Receiving SLoc." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="toMatDocLines" Relationship="ZLOCTRANSFER_SRV.asMatdocLine" FromRole="FromRole_asMatdocLine" ToRole="ToRole_asMatdocLine"/>
+            </EntityType>
+            <EntityType Name="matdocline" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Headid"/>
+                    <PropertyRef Name="Lineid"/>
+                </Key>
+                <Property Name="Headid" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="INT1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lineid" Type="Edm.Byte" Nullable="false" sap:unicode="false" sap:label="INT1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Article" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Quantity" Type="Edm.Decimal" Nullable="false" Precision="13" Scale="3" sap:unicode="false" sap:label="Quantity in UnE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="asMatdocLine" sap:content-version="1">
+                <End Type="ZLOCTRANSFER_SRV.matdochead" Multiplicity="1" Role="FromRole_asMatdocLine"/>
+                <End Type="ZLOCTRANSFER_SRV.matdocline" Multiplicity="*" Role="ToRole_asMatdocLine"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_asMatdocLine">
+                        <PropertyRef Name="Headid"/>
+                    </Principal>
+                    <Dependent Role="ToRole_asMatdocLine">
+                        <PropertyRef Name="Headid"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZLOCTRANSFER_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="userdataSet" EntityType="ZLOCTRANSFER_SRV.userdata" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="siteSet" EntityType="ZLOCTRANSFER_SRV.site" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="locationSet" EntityType="ZLOCTRANSFER_SRV.location" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="articleSet" EntityType="ZLOCTRANSFER_SRV.article" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="matdocheadSet" EntityType="ZLOCTRANSFER_SRV.matdochead" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="matdoclineSet" EntityType="ZLOCTRANSFER_SRV.matdocline" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="asMatdocLineSet" Association="ZLOCTRANSFER_SRV.asMatdocLine" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="matdocheadSet" Role="FromRole_asMatdocLine"/>
+                    <End EntitySet="matdoclineSet" Role="ToRole_asMatdocLine"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

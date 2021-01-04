@@ -1,0 +1,34 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form"
+	controllerName="isr.jmsl_LocationTransfer.controller.Selection" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{i18n>tiSelection}">
+		<content>
+			<VBox class="sapUiSmallMargin">
+				<f:SimpleForm editable="true" layout="ResponsiveGridLayout">
+					<Label text="{i18n>lblMoveType}">
+						<layoutData>
+							<l:GridData span="XL2 L2 M2 S4"/>
+						</layoutData>
+					</Label>
+					<Text text="{oModel>Movetype}">
+						<layoutData>
+							<l:GridData span="XL2 L2 M2 S8"/>
+						</layoutData>
+					</Text>
+					<Label text="{i18n>lblSite}">
+						<layoutData>
+							<l:GridData span="XL2 L2 M2 S4"/>
+						</layoutData>
+					</Label>
+					<Input id="inSite" value="{oModel>Site}" width="5rem">
+						<layoutData>
+							<l:GridData span="XL2 L2 M2 S8"/>
+						</layoutData>
+					</Input>
+				</f:SimpleForm>
+				<List id="lstLocations" headerText="{i18n>lblLocations}" items="{oModel>/locationSet}">
+					<StandardListItem title="{oModel>Locationid} {oModel>Locationname}" type="Navigation" press="onLocationPress"/>
+				</List>
+			</VBox>
+		</content>
+	</Page>
+</mvc:View>

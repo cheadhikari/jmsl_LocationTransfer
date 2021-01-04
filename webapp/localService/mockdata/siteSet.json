@@ -1,0 +1,13 @@
+{
+	"d": {
+		"results": [{
+			"__metadata": {
+				"id": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/siteSet('SCAG')",
+				"uri": "http://patron.keells.lk:8000/sap/opu/odata/sap/ZLOCTRANSFER_SRV/siteSet('SCAG')",
+				"type": "ZLOCTRANSFER_SRV.site"
+			},
+			"Site": "SCAG",
+			"Sitename": "K/S Athurugiriya"
+		}]
+	}
+}
