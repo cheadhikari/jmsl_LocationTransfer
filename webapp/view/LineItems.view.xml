@@ -4,12 +4,12 @@
 		<headerContent>
 			<OverflowToolbar>
 				<ToolbarSpacer/>
-				<Button text="{i18n>lblAddItem}" icon="sap-icon://add" press="onRowAdd"/>
+				<Button icon="sap-icon://add" tooltip="{i18n>lblAddItem}" width="4rem" press="onRowAdd"/>
 			</OverflowToolbar>
 		</headerContent>
 		<content>
 			<VBox class="sapUiSmallMargin">
-				<Table id="tabLineItems" mode="Delete" delete="onRowDelete">
+				<Table id="tabLineItems" inset="false" alternateRowColors="true" mode="Delete" delete="onRowDelete">
 					<columns>
 						<Column>
 							<Text text="{i18n>lblArticle}"/>
@@ -26,9 +26,9 @@
 		</content>
 		<footer>
 			<OverflowToolbar>
-				<Button text="{i18n>lblClear}" type="Reject" press="onClear"/>
+				<Button icon="sap-icon://cancel" tooltip="{i18n>lblClear}" width="5rem" type="Reject" press="onClear"/>
 				<ToolbarSpacer/>
-				<Button text="{i18n>lblSave}" type="Emphasized" width="5rem" press="onSave"/>
+				<Button icon="sap-icon://save" tooltip="{i18n>lblSave}" width="5rem" type="Emphasized" press="onSave"/>
 			</OverflowToolbar>
 		</footer>
 	</Page>
